@@ -9,9 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/portfolio.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/section-bg.css">
 </head>
 <body>
     <div class="bg-decoration"></div>
+    <div class="bg-shapes">
+        <div class="bg-shape bg-shape--circle-sm"></div>
+        <div class="bg-shape bg-shape--diamond"></div>
+        <div class="bg-shape bg-shape--circle-md"></div>
+        <div class="bg-shape bg-shape--square"></div>
+        <div class="bg-shape bg-shape--circle-lg"></div>
+        <div class="bg-shape bg-shape--hex"></div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -23,38 +33,301 @@
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#home">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li class="nav-dropdown">
                 <a href="#" class="dropdown-toggle">Projects <span class="arrow"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#code">Code Projects</a></li>
-                    <li><a href="#nocode">NoCode Projects</a></li>
-                    <li><a href="#games">Game Projects</a></li>
-                    <li><a href="#robo">Robotic Projects</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#nocode">NoCode</a></li>
+                    <li><a href="#games">Game</a></li>
+                    <li><a href="#robo">AI / Robotics</a></li>
+                    <li><a href="#articles">Articles</a></li>
                 </ul>
             </li>
-            <li><a href="#articles">Articles</a></li>
         </ul>
     </nav>
 
     <main>
         <!-- Home / About Section -->
-        <section id="home" class="section">
+        <section id="home" class="section section-about">
             <div class="container">
                 <h1>About</h1>
                 <div class="divider"></div>
-                <p class="about-text">
-                    Professional with 4+ years US experience (Tech Support Engineer, Senior Software Engineer, CTO) and 2+ years European experience (Game Developer, Producer, Lead Software Engineer, Lead Consultant). Currently serving as Founder & CEO at SJA Pathway and Product & Engineering Lead at Map.ca. Educational background includes BCA, MCA, and ongoing Master's in Engineering (Robotics) at Stevens Institute of Technology. Additional 2+ years content writing experience in lifestyle and technology sectors.
-                </p>
-                <div class="about-links">
-                    <a href="education.html" class="tag-link">Education</a>
-                    <a href="experience.html" class="tag-link">Experience</a>
+                <div class="about-row">
+                    <img src="../assets/images/sja/sja_pic.jpeg" alt="Syeda Juveria Afreen" class="about-photo">
+                    <div class="about-info">
+                        <p class="about-text">
+                            Professional with 4+ years US experience (Tech Support Engineer, Senior Software Engineer, CTO) and 2+ years European experience (Game Developer, Producer, Lead Software Engineer, Lead Consultant). Currently serving as Founder & CEO at SJA Pathway and Product & Engineering Lead at Map.ca. Educational background includes BCA, MCA, and ongoing Master's in Engineering (Robotics) at Stevens Institute of Technology. Additional 2+ years content writing experience in lifestyle and technology sectors.
+                        </p>
+                        <div class="about-links">
+                            <a href="#education" class="tag-link">Education</a>
+                            <a href="#experience" class="tag-link">Experience</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section section-education">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Education</h2>
+                    <a href="certificates.html" class="btn-primary">Certificates</a>
+                </div>
+                <div class="divider"></div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker current"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/education/stevens.jpg" alt="Stevens Institute of Technology logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">Sep 2024 - Present</span>
+                                <h3>Masters of Engineering in Robotics</h3>
+                                <a href="https://www.stevens.edu/" class="timeline-org" target="_blank" rel="noopener noreferrer">Stevens Institute of Technology</a>
+                                <span class="timeline-location">Hoboken, New Jersey, United States</span>
+                                <span class="timeline-status status-current">Currently Enrolled</span>
+                                <a href="https://drive.google.com/file/d/1fFakjdiM49agsbpU5FL5BDcPSroKOiB3/view?usp=sharing" class="btn-outline" target="_blank" rel="noopener noreferrer">View Transcript</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/education/sgvu.jpg" alt="Suresh Gyan Vihar University logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">July 2018 - Dec 2021</span>
+                                <h3>Masters of Computer Application</h3>
+                                <a href="https://www.gyanvihar.org/" class="timeline-org" target="_blank" rel="noopener noreferrer">Suresh Gyan Vihar University</a>
+                                <span class="timeline-location">Jaipur, Rajasthan, India</span>
+                                <a href="https://drive.google.com/file/d/1iypVpej_YDRb1J32suB7JBW-lgX5x0uZ/view?usp=drive_link" class="btn-outline" target="_blank" rel="noopener noreferrer">View Degree Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/education/alagappa.jpg" alt="Alagappa University logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">June 2014 - August 2017</span>
+                                <h3>Bachelors of Computer Application</h3>
+                                <a href="https://www.alagappauniversity.ac.in/homepage" class="timeline-org" target="_blank" rel="noopener noreferrer">Alagappa University</a>
+                                <span class="timeline-location">Karaikudi, Tamil Nadu, India</span>
+                                <a href="https://drive.google.com/file/d/1AeZV6zg5KEM2vdN7LelGvA94thtkIJ1B/view?usp=drive_link" class="btn-outline" target="_blank" rel="noopener noreferrer">View Degree Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section section-experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="divider"></div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker current"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/sjapathway.jpg" alt="SJA Pathway logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">March 2025 - Present</span>
+                                <h3>Founder & CEO</h3>
+                                <a href="https://sjapathway.com/" class="timeline-org" target="_blank" rel="noopener noreferrer">SJA Pathway</a>
+                                <span class="timeline-location">Saudi Arabia</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Self-Employed</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker current"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/map-ca.jpeg" alt="Map.ca logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">Nov 2025 - Present</span>
+                                <h3>Product and Engineering Lead</h3>
+                                <a href="https://map.ca" class="timeline-org" target="_blank" rel="noopener noreferrer">Map.ca</a>
+                                <span class="timeline-location">Canada</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Part-Time</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/globalcontriver.jpg" alt="Global Contriver logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">Oct 2024 - Nov 2025</span>
+                                <h3>Lead Consultant (Web & Software Development)</h3>
+                                <a href="https://globalcontriver.com/" class="timeline-org" target="_blank" rel="noopener noreferrer">Global Contriver</a>
+                                <span class="timeline-location">Sri Lanka</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Freelance</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/khepriservice.jpg" alt="Khepri Service logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">May 2024 - Feb 2025</span>
+                                <h3>Lead Software Engineer (Code + No-Code)</h3>
+                                <span class="timeline-org-text">Khepri Service</span>
+                                <span class="timeline-location">France</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Freelance</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/lifeloversmagazine.jpg" alt="Life Lovers Magazine logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">April 2023 - Sep 2025</span>
+                                <h3>Content Writer</h3>
+                                <span class="timeline-org-text">Life Lovers Magazine</span>
+                                <span class="timeline-location">United Kingdom</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Freelance</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/apexgames.png" alt="Apex Games logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">Sep 2022 - Dec 2025</span>
+                                <h3>Co-Founder & CTO</h3>
+                                <span class="timeline-org-text">Apex Games</span>
+                                <span class="timeline-location">United States</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Part-Time</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/itelescope.jpg" alt="iTelescope logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">Feb 2025 - April 2025</span>
+                                <h3>Software Developer</h3>
+                                <span class="timeline-org-text">iTelescope</span>
+                                <span class="timeline-location">Australia</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Contract</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/learnroboticsandai.jpg" alt="Learn Robotics & AI logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">Jan 2025 - March 2025</span>
+                                <h3>Content Creator (Technical Blogging)</h3>
+                                <span class="timeline-org-text">Learn Robotics & AI</span>
+                                <span class="timeline-location">Germany</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Internship</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/safholdings.jpg" alt="SAF Holdings logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">April 2024 - April 2024</span>
+                                <h3>Social Media Administrator</h3>
+                                <span class="timeline-org-text">SAF Holdings</span>
+                                <span class="timeline-location">Saudi Arabia</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Freelance</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/genrait.jpg" alt="GenrAIT Inc logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">Jan 2023 - Feb 2024</span>
+                                <h3>Senior Software Engineer</h3>
+                                <span class="timeline-org-text">GenrAIT Inc</span>
+                                <span class="timeline-location">United States</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Full Time</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/dovelp.jpg" alt="Dovelp logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">Aug 2022 - April 2023</span>
+                                <h3>Game Developer & Producer</h3>
+                                <span class="timeline-org-text">Dovelp</span>
+                                <span class="timeline-location">United Kingdom</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Contract</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/microverse.jpg" alt="Microverse logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">March 2022 - Feb 2023</span>
+                                <h3>Technical Support Engineer</h3>
+                                <span class="timeline-org-text">Microverse</span>
+                                <span class="timeline-location">United States</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Part-Time</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Code Projects -->
-        <section id="code" class="section">
+        <section id="code" class="section section-code">
             <div class="container">
                 <div class="section-header">
                     <h2>Code Projects</h2>
@@ -62,6 +335,34 @@
                 </div>
                 <div class="divider"></div>
                 <div class="projects-grid">
+                    <a href="https://personality.map.ca" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #e040fb, #aa00ff);"></div>
+                        <div class="project-info">
+                            <h3>Personality Map</h3>
+                            <p>React, Next.js, Supabase, Cloudflare</p>
+                        </div>
+                    </a>
+                    <a href="https://iq.map.ca" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #00bcd4, #0097a7);"></div>
+                        <div class="project-info">
+                            <h3>IQ Map</h3>
+                            <p>React, Next.js, Supabase, Cloudflare</p>
+                        </div>
+                    </a>
+                    <a href="https://news.map.ca" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #ff6f00, #ff8f00);"></div>
+                        <div class="project-info">
+                            <h3>News Map</h3>
+                            <p>React, Next.js, Supabase, Cloudflare</p>
+                        </div>
+                    </a>
+                    <a href="https://eplatform.sjapathway.com" class="project-card" target="_blank" rel="noopener noreferrer">
+                        <div class="project-thumb" style="background: linear-gradient(135deg, #26a69a, #00897b);"></div>
+                        <div class="project-info">
+                            <h3>EPlatform</h3>
+                            <p>Python, Django, Render, Supabase</p>
+                        </div>
+                    </a>
                     <a href="https://jplatform.sjapathway.com/" class="project-card" target="_blank" rel="noopener noreferrer">
                         <div class="project-thumb" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
                         <div class="project-info">
@@ -140,7 +441,7 @@
         </section>
 
         <!-- NoCode Projects -->
-        <section id="nocode" class="section">
+        <section id="nocode" class="section section-nocode">
             <div class="container">
                 <div class="section-header">
                     <h2>NoCode Projects</h2>
@@ -293,7 +594,7 @@
         </section>
 
         <!-- Game Projects -->
-        <section id="games" class="section">
+        <section id="games" class="section section-games">
             <div class="container">
                 <div class="section-header">
                     <h2>Game Projects</h2>
@@ -361,11 +662,11 @@
             </div>
         </section>
 
-        <!-- Robotic Projects -->
-        <section id="robo" class="section">
+        <!-- AI / Robotics Projects -->
+        <section id="robo" class="section section-robo">
             <div class="container">
                 <div class="section-header">
-                    <h2>Robotic Projects</h2>
+                    <h2>AI / Robotics Projects</h2>
                     <a href="https://docs.google.com/document/d/1NTJWd6c7j-UG7b8_o-0oaUq_BW9LtFz84UuuW5iibXc/edit?usp=sharing" class="btn-primary" target="_blank" rel="noopener noreferrer">Robotics CV</a>
                 </div>
                 <div class="divider"></div>
@@ -431,7 +732,7 @@
         </section>
 
         <!-- Articles -->
-        <section id="articles" class="section">
+        <section id="articles" class="section section-articles">
             <div class="container">
                 <div class="section-header">
                     <h2>Articles</h2>
@@ -542,6 +843,41 @@
         document.querySelectorAll('.project-card, .article-card, .section h2, .about-text').forEach(el => {
             el.classList.add('fade-up');
             observer.observe(el);
+        });
+        // Floating section background icons
+        const sectionIcons = {
+            'section-about': ['💻','🤖','📐','△','◇','🧠','📖','⬡','💡','🔬','📊','🖥️','📚','○','🎯','◻'],
+            'section-education': ['📚','✏️','📖','🎓','📝','📕','🖊️','📓','📘','🎒','📗','✒️','📔','🏫','📙','🎓'],
+            'section-code': ['💻','⌨️','🖥️','</>','{ }','🐍','⚛️','🔧','📦','[ ]','#','🔗','🛠️','💻','⌨️','🖥️'],
+            'section-nocode': ['Shopify','Webflow','WordPress','Carrd','Bubble','Glide','Airtable','Lovable','Weebly','Mailchimp','Systeme','Shopify','Webflow','Carrd','Bubble','WordPress'],
+            'section-games': ['🎮','🕹️','🎯','🏆','⚔️','🎲','🚀','💎','🛡️','👾','🏅','⭐','🎮','🕹️','🎯','🏆'],
+            'section-robo': ['🤖','🧠','⚙️','🔬','📡','🦾','💡','📊','🔩','MATLAB','🧮','C++','Python','🔌','🤖','🧠'],
+            'section-articles': ['✍️','📝','🖊️','📰','📓','✒️','💭','📄','🗞️','✏️','📋','🖋️','💬','📃','📝','✍️']
+        };
+
+        const sizes = ['sm','md','lg','sm','md','sm','lg','md','sm','md','lg','sm','md','sm','lg','md'];
+
+        Object.entries(sectionIcons).forEach(([className, icons]) => {
+            const section = document.querySelector('.' + className);
+            if (!section) return;
+
+            const container = document.createElement('div');
+            container.className = 'section-bg-icons';
+
+            const isText = className === 'section-nocode' || className === 'section-robo';
+
+            icons.forEach((icon, i) => {
+                const el = document.createElement('span');
+                const sizeClass = sizes[i % sizes.length];
+                el.className = 'icon ' + sizeClass + (isText && icon.length > 2 ? ' text' : '');
+                if (isText && icon.length > 2 && sizeClass === 'lg') el.classList.add('lg');
+                el.textContent = icon;
+                el.style.left = (5 + Math.random() * 85) + '%';
+                el.style.top = (5 + Math.random() * 85) + '%';
+                container.appendChild(el);
+            });
+
+            section.insertBefore(container, section.firstChild);
         });
     </script>
 </body>
