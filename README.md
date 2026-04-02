@@ -17,11 +17,22 @@ Personal portfolio website for **Syeda Juveria Afreen (SJA)** — CEO | CTO | So
 ## Structure
 
 ```
-├── index.html          # Main landing page
-├── portfolio.html      # Full portfolio page
-├── css/
-│   ├── landing.css     # Landing page styles
-│   └── portfolio.css   # Portfolio page styles
+├── index.html                  # Main landing page
+├── pages/
+│   ├── portfolio.html          # Full portfolio page
+│   ├── education.html          # Education timeline
+│   ├── experience.html         # Experience timeline
+│   └── certificates.html       # Certificates & credentials
+├── assets/
+│   ├── css/
+│   │   ├── landing.css         # Landing page styles
+│   │   ├── portfolio.css       # Portfolio page styles
+│   │   ├── pages.css           # Education & experience styles
+│   │   └── certificates.css    # Certificates page styles
+│   ├── images/
+│   │   ├── education/          # University logos
+│   │   └── experience/         # Company logos
+│   └── js/
 └── README.md
 ```
 
