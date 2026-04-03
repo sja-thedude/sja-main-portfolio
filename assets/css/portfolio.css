@@ -199,8 +199,13 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
+}
+
+.nav-links a.active {
+    color: #d4af37;
 }
 
 /* Dropdown */
@@ -466,6 +471,8 @@ h2 {
 .project-thumb {
     height: 140px;
     width: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .project-info {
@@ -496,14 +503,28 @@ h2 {
 }
 
 .article-card {
-    display: block;
-    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1rem 1.5rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     text-decoration: none;
     color: #e0e0e0;
     transition: all 0.3s ease;
     border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.article-thumb {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.article-text {
+    flex: 1;
 }
 
 .article-card:hover {
@@ -666,5 +687,11 @@ h2 {
 
     .project-thumb {
         height: 100px;
+    }
+
+    .article-thumb {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
     }
 }
