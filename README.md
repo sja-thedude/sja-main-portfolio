@@ -31,14 +31,18 @@ Personal portfolio website for **Syeda Juveria Afreen (SJA)** — CEO | CTO | So
 │   │   ├── pages.css           # Education & experience styles
 │   │   ├── certificates.css    # Certificates page styles
 │   │   ├── section-bg.css      # Floating section background icons
-│   │   └── animations.css      # Shared animations & transitions
+│   │   ├── animations.css      # Shared animations & transitions
+│   │   └── modal.css           # Role/education detail modal + document lightbox
 │   ├── images/
 │   │   ├── education/          # University logos
 │   │   ├── experience/         # Company logos
 │   │   ├── code/ saas/ nocode/ games/ ai-robotics/ articles/   # Project thumbnails
 │   │   └── sja/                # Profile photo & background
+│   ├── docs/                   # Transcripts (PDF) opened in the lightbox
 │   └── js/
-│       └── animations.js       # Shared scroll/hover animation behaviour
+│       ├── animations.js       # Shared scroll/hover animation behaviour
+│       ├── experience-data.js  # Role & education descriptions (edit text here)
+│       └── experience-modal.js # "View Details" modal + certificate/transcript lightbox
 ├── allwebsites.md              # Every live website with description + link
 └── README.md
 ```

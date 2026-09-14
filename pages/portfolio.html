@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/css/pages.css">
     <link rel="stylesheet" href="../assets/css/section-bg.css">
     <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/modal.css">
 </head>
 <body>
     <div class="bg-decoration"></div>
@@ -62,7 +63,7 @@
                     <img src="../assets/images/sja/sja_pic.jpeg" alt="Syeda Juveria Afreen" class="about-photo">
                     <div class="about-info">
                         <p class="about-text">
-                            Professional with 4+ years US experience (Tech Support Engineer, Senior Software Engineer, CTO) and 2+ years European experience (Game Developer, Producer, Lead Software Engineer, Lead Consultant). Currently serving as Founder & CEO at SJA Pathway; most recently Product & Engineering Lead at Map.ca. Educational background includes Bachelor of Computer Applications (BCA), Master of Computer Applications (MCA), and ongoing Master of Engineering in Robotics (MEng) at Stevens Institute of Technology. Additional 2+ years content writing experience in lifestyle and technology sectors.
+                            Professional with 4+ years US experience (Tech Support Engineer, Senior Software Engineer, CTO) and 2+ years European experience (Game Developer, Producer, Lead Software Engineer, Lead Consultant). Currently a freelance Full-Stack & Automation Engineer (Upwork) and Founder & CEO at SJA Pathway; previously Product & Engineering Lead at Map.ca. Educational background includes Bachelor of Computer Applications (BCA), Master of Computer Applications (MCA), and ongoing Master of Engineering in Robotics (MEng) at Stevens Institute of Technology. Additional 2+ years content writing experience in lifestyle and technology sectors.
                         </p>
                         <div class="about-links">
                             <a href="#education" class="tag-link">Education</a>
@@ -92,7 +93,8 @@
                                 <a href="https://www.stevens.edu/" class="timeline-org" target="_blank" rel="noopener noreferrer">Stevens Institute of Technology</a>
                                 <span class="timeline-location">Hoboken, New Jersey, United States</span>
                                 <span class="timeline-status status-current">Currently Enrolled</span>
-                                <a href="https://drive.google.com/file/d/1fFakjdiM49agsbpU5FL5BDcPSroKOiB3/view?usp=sharing" class="btn-outline" target="_blank" rel="noopener noreferrer">View Transcript</a>
+                                <a href="../assets/docs/meng-robotics-transcript.pdf" class="btn-outline btn-doc" data-doc-type="pdf" data-doc-title="MEng Robotics — Unofficial Transcript" target="_blank" rel="noopener noreferrer">View Transcript</a>
+                                <button type="button" class="btn-details" data-role="stevens" data-group="education">View Coursework <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -105,7 +107,8 @@
                                 <h3>Masters of Computer Application</h3>
                                 <a href="https://www.gyanvihar.org/" class="timeline-org" target="_blank" rel="noopener noreferrer">Suresh Gyan Vihar University</a>
                                 <span class="timeline-location">Jaipur, Rajasthan, India</span>
-                                <a href="https://drive.google.com/file/d/1iypVpej_YDRb1J32suB7JBW-lgX5x0uZ/view?usp=drive_link" class="btn-outline" target="_blank" rel="noopener noreferrer">View Degree Certificate</a>
+                                <a href="../assets/images/education/mca-certificate.jpeg" class="btn-outline btn-doc" data-doc-type="image" data-doc-title="Master of Computer Applications — Degree Certificate" target="_blank" rel="noopener noreferrer">View Degree Certificate</a>
+                                <button type="button" class="btn-details" data-role="sgvu" data-group="education">View Coursework <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -118,7 +121,8 @@
                                 <h3>Bachelors of Computer Application</h3>
                                 <a href="https://www.alagappauniversity.ac.in/homepage" class="timeline-org" target="_blank" rel="noopener noreferrer">Alagappa University</a>
                                 <span class="timeline-location">Karaikudi, Tamil Nadu, India</span>
-                                <a href="https://drive.google.com/file/d/1AeZV6zg5KEM2vdN7LelGvA94thtkIJ1B/view?usp=drive_link" class="btn-outline" target="_blank" rel="noopener noreferrer">View Degree Certificate</a>
+                                <a href="../assets/images/education/bca-certificate.jpeg" class="btn-outline btn-doc" data-doc-type="image" data-doc-title="Bachelor of Computer Applications — Degree Certificate" target="_blank" rel="noopener noreferrer">View Degree Certificate</a>
+                                <button type="button" class="btn-details" data-role="alagappa" data-group="education">View Coursework <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -135,6 +139,23 @@
                     <div class="timeline-item">
                         <div class="timeline-marker current"></div>
                         <div class="timeline-content">
+                            <img src="../assets/images/experience/freelance.png" alt="Freelance logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">May 2026 - Present</span>
+                                <h3>Full-Stack Developer &amp; Automation Engineer</h3>
+                                <a href="https://www.upwork.com/" class="timeline-org" target="_blank" rel="noopener noreferrer">Upwork · Freelancer.com</a>
+                                <span class="timeline-location">Remote</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Freelance</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                                <button type="button" class="btn-details" data-role="upwork" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker current"></div>
+                        <div class="timeline-content">
                             <img src="../assets/images/experience/sjapathway.png" alt="SJA Pathway logo" class="timeline-logo">
                             <div class="timeline-text">
                                 <span class="timeline-date">March 2025 - Present</span>
@@ -145,6 +166,7 @@
                                     <span class="tag">Self-Employed</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="sjapathway" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -161,7 +183,25 @@
                                     <span class="tag">Part-Time</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="mapca" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <img src="../assets/images/experience/escape-app-ai.png" alt="Escape App AI logo" class="timeline-logo">
+                            <div class="timeline-text">
+                                <span class="timeline-date">May 2025 - Dec 2025</span>
+                                <h3>AI &amp; Game QA Developer</h3>
+                                <span class="timeline-org-text">Escape™ App AI</span>
+                                <span class="timeline-location">Remote</span>
+                                <div class="timeline-tags">
+                                    <span class="tag">Internship</span>
+                                    <span class="tag">Remote</span>
+                                </div>
+                                <button type="button" class="btn-details" data-role="escape" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
+                            </div>
+                        </div>
+                    </div>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -177,6 +217,7 @@
                                     <span class="tag">Freelance</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="globalcontriver" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -193,6 +234,7 @@
                                     <span class="tag">Freelance</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="khepri" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -209,6 +251,7 @@
                                     <span class="tag">Freelance</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="lifelovers" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -225,6 +268,7 @@
                                     <span class="tag">Part-Time</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="apexgames" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -241,6 +285,7 @@
                                     <span class="tag">Contract</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="itelescope" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -257,6 +302,7 @@
                                     <span class="tag">Internship</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="learnrobotics" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -273,6 +319,7 @@
                                     <span class="tag">Freelance</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="safholdings" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -289,6 +336,7 @@
                                     <span class="tag">Full Time</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="genrait" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -305,6 +353,7 @@
                                     <span class="tag">Contract</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="dovelp" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -321,6 +370,7 @@
                                     <span class="tag">Part-Time</span>
                                     <span class="tag">Remote</span>
                                 </div>
+                                <button type="button" class="btn-details" data-role="microverse" data-group="experience">View Details <span class="arrow" aria-hidden="true">&rarr;</span></button>
                             </div>
                         </div>
                     </div>
@@ -1942,6 +1992,8 @@
     </footer>
 
     <script src="../assets/js/animations.js" defer></script>
+    <script src="../assets/js/experience-data.js" defer></script>
+    <script src="../assets/js/experience-modal.js" defer></script>
     <script>
         // Mobile nav toggle
         const navToggle = document.querySelector('.nav-toggle');
