@@ -234,7 +234,6 @@
         opacity 0.7s var(--ease-out),
         box-shadow 0.45s var(--ease-out),
         border-color 0.45s var(--ease-out);
-    will-change: transform;
 }
 
 .project-card:hover {
