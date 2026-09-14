@@ -6,9 +6,9 @@
    ========================================================================== */
 
 :root {
-    --gold: #d4af37;
-    --gold-light: #e0c050;
-    --blue: #4682dc;
+    --gold: var(--accent);
+    --gold-light: var(--accent-light);
+    --blue: var(--accent2);
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -47,7 +47,7 @@
     height: 420px;
     margin: -210px 0 0 -210px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.10) 0%, rgba(70, 130, 220, 0.05) 35%, transparent 65%);
+    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.10) 0%, rgba(var(--accent2-rgb), 0.05) 35%, transparent 65%);
     pointer-events: none;
     z-index: 0;
     opacity: 0;
@@ -76,7 +76,7 @@
 }
 
 .nav-title {
-    background: linear-gradient(90deg, var(--gold) 0%, #fff3c4 50%, var(--gold) 100%);
+    background: linear-gradient(90deg, var(--gold) 0%, var(--accent-glow) 50%, var(--gold) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -239,11 +239,11 @@
 
 .project-card:hover {
     transform: translateY(-8px) scale(1.015);
-    border-color: rgba(212, 175, 55, 0.45);
+    border-color: rgba(var(--accent-rgb), 0.45);
     box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.45),
-        0 0 0 1px rgba(212, 175, 55, 0.15),
-        0 12px 32px rgba(212, 175, 55, 0.12);
+        0 18px 40px rgba(var(--shadow-rgb), 0.45),
+        0 0 0 1px rgba(var(--accent-rgb), 0.15),
+        0 12px 32px rgba(var(--accent-rgb), 0.12);
 }
 
 /* Thumb zoom + subtle brightness on hover */
@@ -275,7 +275,7 @@ img.lazy-img.loaded {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.10) 48%, rgba(255, 255, 255, 0.18) 50%, rgba(255, 255, 255, 0.10) 52%, transparent 70%);
+    background: linear-gradient(115deg, transparent 30%, rgba(var(--fg-rgb), 0.10) 48%, rgba(var(--fg-rgb), 0.18) 50%, rgba(var(--fg-rgb), 0.10) 52%, transparent 70%);
     transform: translateX(-120%);
     pointer-events: none;
     transition: transform 0s;
@@ -355,8 +355,8 @@ img.lazy-img.loaded {
 
 .article-card:hover {
     transform: translateX(10px);
-    border-color: rgba(212, 175, 55, 0.35);
-    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(var(--accent-rgb), 0.35);
+    background: rgba(var(--fg-rgb), 0.07);
 }
 
 .article-thumb {
@@ -365,7 +365,7 @@ img.lazy-img.loaded {
 
 .article-card:hover .article-thumb {
     transform: rotate(-3deg) scale(1.08);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 20px rgba(var(--shadow-rgb), 0.4);
 }
 
 .article-card h3 {
@@ -396,7 +396,7 @@ img.lazy-img.loaded {
 
 .timeline-item:hover .timeline-marker {
     transform: scale(1.4);
-    box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.15);
+    box-shadow: 0 0 0 6px rgba(var(--accent-rgb), 0.15);
 }
 
 .timeline-marker.current {
@@ -404,8 +404,8 @@ img.lazy-img.loaded {
 }
 
 @keyframes marker-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.55); }
-    60%      { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0.55); }
+    60%      { box-shadow: 0 0 0 12px rgba(var(--accent-rgb), 0); }
 }
 
 .timeline-content {
@@ -414,7 +414,7 @@ img.lazy-img.loaded {
 
 .timeline-item:hover .timeline-content {
     transform: translateX(6px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 30px rgba(var(--shadow-rgb), 0.35);
 }
 
 .timeline-logo {
@@ -431,7 +431,7 @@ img.lazy-img.loaded {
 
 .tag:hover {
     transform: translateY(-2px);
-    background: rgba(212, 175, 55, 0.18);
+    background: rgba(var(--accent-rgb), 0.18);
 }
 
 /* --------------------------------------------------------------------------
@@ -451,7 +451,7 @@ img.lazy-img.loaded {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.35) 50%, transparent 65%);
+    background: linear-gradient(115deg, transparent 35%, rgba(var(--fg-rgb), 0.35) 50%, transparent 65%);
     transform: translateX(-120%);
     transition: transform 0s;
 }
@@ -464,7 +464,7 @@ img.lazy-img.loaded {
 
 .btn-primary:hover {
     transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 10px 24px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 24px rgba(var(--accent-rgb), 0.3);
 }
 
 .btn-primary:active {
@@ -486,7 +486,7 @@ img.lazy-img.loaded {
 .tag-link:hover {
     background: transparent;
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 8px 18px rgba(var(--accent-rgb), 0.25);
 }
 
 .tag-link:hover::before {
@@ -497,7 +497,7 @@ img.lazy-img.loaded {
 .ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.45);
+    background: rgba(var(--fg-rgb), 0.45);
     transform: scale(0);
     animation: ripple 0.6s var(--ease-out) forwards;
     pointer-events: none;
@@ -551,14 +551,14 @@ img.lazy-img.loaded {
 .about-photo {
     animation: photo-float 6s ease-in-out infinite;
     transition: transform 0.5s var(--ease-out), box-shadow 0.5s ease, border-color 0.5s ease;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 20px 40px rgba(var(--shadow-rgb), 0.35);
 }
 
 .about-photo:hover {
     animation-play-state: paused;
     transform: scale(1.04) rotate(-1deg);
-    border-color: rgba(212, 175, 55, 0.7);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(212, 175, 55, 0.2);
+    border-color: rgba(var(--accent-rgb), 0.7);
+    box-shadow: 0 25px 50px rgba(var(--shadow-rgb), 0.5), 0 0 40px rgba(var(--accent-rgb), 0.2);
 }
 
 @keyframes photo-float {
@@ -632,8 +632,8 @@ img.lazy-img.loaded {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    background: rgba(15, 15, 30, 0.9);
+    border: 1px solid rgba(var(--accent-rgb), 0.4);
+    background: var(--panel-bg);
     color: var(--gold);
     font-size: 1.1rem;
     display: grid;
@@ -656,8 +656,8 @@ img.lazy-img.loaded {
 
 .back-to-top:hover {
     background: var(--gold);
-    color: #0a0a0a;
-    box-shadow: 0 10px 24px rgba(212, 175, 55, 0.35);
+    color: var(--on-accent);
+    box-shadow: 0 10px 24px rgba(var(--accent-rgb), 0.35);
     transform: translateY(-3px) scale(1.06);
 }
 

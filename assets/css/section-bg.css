@@ -43,7 +43,7 @@
 .section-bg-icons .icon.text {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 700;
-    color: #e0e0e0;
+    color: var(--text);
     font-size: 1.2rem;
     opacity: 0.06;
 }

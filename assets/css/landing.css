@@ -11,8 +11,8 @@ html, body {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0a0a0a;
-    color: #ffffff;
+    background-color: var(--on-accent);
+    color: var(--text-strong);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +23,7 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background: linear-gradient(135deg, rgba(10, 10, 10, 0.8) 0%, rgba(26, 26, 46, 0.75) 50%, rgba(10, 10, 10, 0.8) 100%);
+    background: var(--landing-overlay);
     z-index: 0;
 }
 
@@ -45,8 +45,8 @@ body::before {
     pointer-events: none;
     background: linear-gradient(
         135deg,
-        rgba(212, 175, 55, 0.1) 0%,
-        rgba(70, 130, 220, 0.06) 100%
+        rgba(var(--accent-rgb), 0.1) 0%,
+        rgba(var(--accent2-rgb), 0.06) 100%
     );
 }
 
@@ -70,7 +70,7 @@ h1 {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 2.625em;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-strong);
     line-height: 1.2;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
@@ -80,7 +80,7 @@ h1 {
     font-family: 'Inter', sans-serif;
     font-size: 1.125em;
     font-weight: 600;
-    color: #d4af37;
+    color: var(--accent);
     line-height: 1.6;
 }
 
@@ -102,9 +102,9 @@ h1 {
     font-family: 'Inter', sans-serif;
     font-size: 1em;
     font-weight: 600;
-    color: #e0e0e0;
+    color: var(--text);
     text-decoration: none;
-    border: 2px solid #d4af37;
+    border: 2px solid var(--accent);
     border-radius: 8px;
     background: transparent;
     transition: all 0.25s ease;
@@ -113,8 +113,8 @@ h1 {
 
 .btn:hover {
     transform: scale(1.0425);
-    background: rgba(212, 175, 55, 0.1);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    background: rgba(var(--accent-rgb), 0.1);
+    box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.2);
 }
 
 .btn:active {
@@ -123,7 +123,7 @@ h1 {
 
 .btn svg {
     flex-shrink: 0;
-    color: #d4af37;
+    color: var(--accent);
 }
 
 /* Animations */
@@ -245,7 +245,7 @@ h1 {
 .orb--gold {
     width: 420px;
     height: 420px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.55), transparent 65%);
+    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.55), transparent 65%);
     top: -10%;
     left: -8%;
 }
@@ -253,7 +253,7 @@ h1 {
 .orb--blue {
     width: 520px;
     height: 520px;
-    background: radial-gradient(circle, rgba(70, 130, 220, 0.45), transparent 65%);
+    background: radial-gradient(circle, rgba(var(--accent2-rgb), 0.45), transparent 65%);
     bottom: -15%;
     right: -10%;
     animation-duration: 24s;
@@ -263,7 +263,7 @@ h1 {
 .orb--rose {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(224, 192, 80, 0.35), transparent 65%);
+    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.35), transparent 65%);
     top: 55%;
     left: 45%;
     animation-duration: 21s;
@@ -305,7 +305,7 @@ h1 .char.space {
 
 /* Gold shimmer sweeps through the subtitle */
 .subtitle {
-    background: linear-gradient(90deg, #d4af37 0%, #d4af37 40%, #fff3c4 50%, #d4af37 60%, #d4af37 100%);
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent) 40%, var(--accent-glow) 50%, var(--accent) 60%, var(--accent) 100%);
     background-size: 250% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -347,7 +347,7 @@ h1 .char.space {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(115deg, transparent 35%, rgba(212, 175, 55, 0.35) 50%, transparent 65%);
+    background: linear-gradient(115deg, transparent 35%, rgba(var(--accent-rgb), 0.35) 50%, transparent 65%);
     transform: translateX(-120%);
 }
 
@@ -358,7 +358,7 @@ h1 .char.space {
 
 .btn:hover {
     transform: translateY(-3px) scale(1.04);
-    box-shadow: 0 12px 28px rgba(212, 175, 55, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.4) inset;
+    box-shadow: 0 12px 28px rgba(var(--accent-rgb), 0.25), 0 0 0 1px rgba(var(--accent-rgb), 0.4) inset;
 }
 
 .btn svg {

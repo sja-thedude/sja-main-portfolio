@@ -12,7 +12,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(var(--accent-rgb), 0.2);
 }
 
 .timeline-item {
@@ -31,8 +31,8 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #d4af37;
-    border: 2px solid #1a1a2e;
+    background: var(--accent);
+    border: 2px solid var(--bg-mid);
     transform: translateX(-5px);
     z-index: 1;
 }
@@ -43,8 +43,8 @@
 }
 
 .timeline-content {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    background: rgba(var(--fg-rgb), 0.05);
+    border: 1px solid rgba(var(--accent-rgb), 0.1);
     border-radius: 8px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -54,7 +54,7 @@
 }
 
 .timeline-content:hover {
-    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.06);
+    box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.06);
     transform: translateX(4px);
 }
 
@@ -65,8 +65,8 @@
     min-width: 80px;
     object-fit: cover;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(212, 175, 55, 0.15);
+    background: rgba(var(--fg-rgb), 0.08);
+    border: 1px solid rgba(var(--accent-rgb), 0.15);
     display: block;
     flex-shrink: 0;
 }
@@ -80,7 +80,7 @@
     display: block;
     font-size: 0.8em;
     font-weight: 600;
-    color: #999;
+    color: var(--muted);
     letter-spacing: 0.03em;
     margin-bottom: 0.3rem;
 }
@@ -88,7 +88,7 @@
 .timeline-text h3 {
     font-size: 1.1em;
     font-weight: 700;
-    color: #e0e0e0;
+    color: var(--text);
     margin-bottom: 0.25rem;
     line-height: 1.4;
 }
@@ -97,30 +97,30 @@
     display: block;
     font-size: 0.9em;
     font-weight: 600;
-    color: #d4af37;
+    color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
     transition: border-color 0.2s;
     margin-bottom: 0.15rem;
     width: fit-content;
 }
 
 .timeline-org:hover {
-    border-bottom-color: #d4af37;
+    border-bottom-color: var(--accent);
 }
 
 .timeline-org-text {
     display: block;
     font-size: 0.9em;
     font-weight: 600;
-    color: #d4af37;
+    color: var(--accent);
     margin-bottom: 0.15rem;
 }
 
 .timeline-location {
     display: block;
     font-size: 0.8em;
-    color: #888;
+    color: var(--muted);
     margin-bottom: 0.4rem;
 }
 
@@ -134,8 +134,8 @@
 }
 
 .status-current {
-    background: rgba(212, 175, 55, 0.15);
-    color: #d4af37;
+    background: rgba(var(--accent-rgb), 0.15);
+    color: var(--accent);
 }
 
 .timeline-tags {
@@ -150,8 +150,8 @@
     font-weight: 500;
     padding: 0.2rem 0.65rem;
     border-radius: 4px;
-    background: rgba(70, 130, 220, 0.1);
-    color: #4682dc;
+    background: rgba(var(--accent2-rgb), 0.1);
+    color: var(--accent2);
 }
 
 .btn-outline {
@@ -161,17 +161,17 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.8em;
     font-weight: 500;
-    color: #d4af37;
+    color: var(--accent);
     text-decoration: none;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
     border-radius: 4px;
     transition: all 0.2s;
 }
 
 .btn-outline:hover {
-    background: #d4af37;
-    color: #0a0a0a;
-    border-color: #d4af37;
+    background: var(--accent);
+    color: var(--on-accent);
+    border-color: var(--accent);
 }
 
 /* Certificates Section */

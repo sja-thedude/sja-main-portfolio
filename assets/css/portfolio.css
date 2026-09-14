@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: 'IBM Plex Mono', monospace;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #1a1a2e 75%, #0a0a0a 100%);
-    color: #e0e0e0;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
     position: relative;
     min-height: 100vh;
@@ -24,16 +24,16 @@ body {
     pointer-events: none;
     overflow: hidden;
     background:
-        radial-gradient(ellipse at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(70, 130, 220, 0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 60% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 50%, rgba(var(--accent-rgb), 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(var(--accent2-rgb), 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(var(--accent-rgb), 0.05) 0%, transparent 50%);
 }
 
 .bg-decoration::before,
 .bg-decoration::after {
     content: '';
     position: absolute;
-    border: 1px solid rgba(61, 61, 61, 0.04);
+    border: 1px solid rgba(var(--muted-3-rgb), 0.04);
 }
 
 /* Large circle top-right */
@@ -44,7 +44,7 @@ body {
     top: -200px;
     right: -150px;
     border-width: 2px;
-    border-color: rgba(212, 175, 55, 0.12);
+    border-color: rgba(var(--accent-rgb), 0.12);
 }
 
 /* Triangle-ish shape bottom-left via rotated square */
@@ -55,7 +55,7 @@ body {
     left: -100px;
     transform: rotate(45deg);
     border-width: 2px;
-    border-color: rgba(70, 130, 220, 0.1);
+    border-color: rgba(var(--accent2-rgb), 0.1);
     border-radius: 20px;
 }
 
@@ -78,7 +78,7 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border-color: rgba(212, 175, 55, 0.15);
+    border-color: rgba(var(--accent-rgb), 0.15);
     top: 30%;
     left: 5%;
 }
@@ -86,7 +86,7 @@ body {
 .bg-shape--diamond {
     width: 80px;
     height: 80px;
-    border-color: rgba(70, 130, 220, 0.12);
+    border-color: rgba(var(--accent2-rgb), 0.12);
     transform: rotate(45deg);
     top: 15%;
     right: 20%;
@@ -97,7 +97,7 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border-color: rgba(212, 175, 55, 0.08);
+    border-color: rgba(var(--accent-rgb), 0.08);
     bottom: 20%;
     right: 5%;
 }
@@ -105,7 +105,7 @@ body {
 .bg-shape--square {
     width: 150px;
     height: 150px;
-    border-color: rgba(70, 130, 220, 0.08);
+    border-color: rgba(var(--accent2-rgb), 0.08);
     border-radius: 12px;
     top: 60%;
     left: 15%;
@@ -116,7 +116,7 @@ body {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    border-color: rgba(212, 175, 55, 0.05);
+    border-color: rgba(var(--accent-rgb), 0.05);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -125,7 +125,7 @@ body {
 .bg-shape--hex {
     width: 60px;
     height: 60px;
-    border-color: rgba(70, 130, 220, 0.1);
+    border-color: rgba(var(--accent2-rgb), 0.1);
     transform: rotate(30deg);
     border-radius: 8px;
     top: 75%;
@@ -145,10 +145,10 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(10, 10, 10, 0.92);
+    background: var(--nav-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
@@ -163,12 +163,12 @@ body {
 .nav-name {
     font-weight: 700;
     font-size: 1.1em;
-    color: #e0e0e0;
+    color: var(--text);
 }
 
 .nav-title {
     font-size: 0.75em;
-    color: #d4af37;
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -180,7 +180,7 @@ body {
 }
 
 .nav-links a {
-    color: #e0e0e0;
+    color: var(--text);
     text-decoration: none;
     font-size: 0.85em;
     font-weight: 500;
@@ -195,7 +195,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: #d4af37;
+    background: var(--accent);
     transition: width 0.3s ease;
 }
 
@@ -205,7 +205,7 @@ body {
 }
 
 .nav-links a.active {
-    color: #d4af37;
+    color: var(--accent);
 }
 
 /* Dropdown */
@@ -225,17 +225,17 @@ body {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(15, 15, 30, 0.97);
+    background: var(--panel-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(61, 61, 61, 0.1);
+    border: 1px solid rgba(var(--muted-3-rgb), 0.1);
     border-radius: 6px;
     list-style: none;
     padding: 0.5rem 0;
     padding-top: 1rem;
     margin-top: 0;
     min-width: 180px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(var(--shadow-rgb), 0.08);
     z-index: 200;
 }
 
@@ -247,14 +247,14 @@ body {
     display: block;
     padding: 0.5rem 1rem;
     font-size: 0.85em;
-    color: #e0e0e0;
+    color: var(--text);
     text-decoration: none;
     transition: background 0.15s;
     white-space: nowrap;
 }
 
 .dropdown-menu li a:hover {
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(var(--accent-rgb), 0.1);
 }
 
 .dropdown-menu li a::after,
@@ -266,8 +266,8 @@ body {
     display: inline-block;
     width: 5px;
     height: 5px;
-    border-right: 1.5px solid #3D3D3D;
-    border-bottom: 1.5px solid #3D3D3D;
+    border-right: 1.5px solid var(--muted-3);
+    border-bottom: 1.5px solid var(--muted-3);
     transform: rotate(45deg);
     margin-left: 5px;
     vertical-align: middle;
@@ -292,7 +292,7 @@ body {
 .nav-toggle span {
     width: 24px;
     height: 2px;
-    background: #e0e0e0;
+    background: var(--text);
     transition: all 0.3s;
 }
 
@@ -354,7 +354,7 @@ h2 {
 .divider {
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #d4af37, #4682dc);
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
     margin-bottom: 2rem;
 }
 
@@ -371,7 +371,7 @@ h2 {
     height: auto;
     object-fit: contain;
     border-radius: 12px;
-    border: 2px solid rgba(212, 175, 55, 0.2);
+    border: 2px solid rgba(var(--accent-rgb), 0.2);
     flex-shrink: 0;
 }
 
@@ -385,7 +385,7 @@ h2 {
     line-height: 1.8;
     max-width: 50rem;
     margin-bottom: 2rem;
-    color: #b0b0b0;
+    color: var(--text-soft);
 }
 
 .about-links {
@@ -398,18 +398,18 @@ h2 {
 .tag-link {
     display: inline-block;
     padding: 0.4rem 1rem;
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    border: 1px solid rgba(var(--accent-rgb), 0.4);
     border-radius: 4px;
     text-decoration: none;
-    color: #d4af37;
+    color: var(--accent);
     font-size: 0.85em;
     font-weight: 500;
     transition: all 0.2s;
 }
 
 .tag-link:hover {
-    background: #d4af37;
-    color: #0a0a0a;
+    background: var(--accent);
+    color: var(--on-accent);
 }
 
 .cv-links {
@@ -421,8 +421,8 @@ h2 {
 .btn-primary {
     display: inline-block;
     padding: 0.6rem 1.25rem;
-    background: linear-gradient(135deg, #d4af37, #b8962e);
-    color: #0a0a0a;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: var(--on-accent);
     text-decoration: none;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.85em;
@@ -432,7 +432,7 @@ h2 {
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #e0c050, #d4af37);
+    background: linear-gradient(135deg, var(--accent-light), var(--accent));
     transform: translateY(-1px);
 }
 
@@ -445,18 +445,18 @@ h2 {
 
 .project-card {
     display: block;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(var(--fg-rgb), 0.05);
     border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
-    color: #e0e0e0;
+    color: var(--text);
     transition: all 0.3s ease;
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(var(--accent-rgb), 0.1);
 }
 
 .project-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.08);
+    box-shadow: 0 12px 32px rgba(var(--accent-rgb), 0.08);
 }
 
 .project-card.no-link {
@@ -487,7 +487,7 @@ h2 {
 
 .project-info p {
     font-size: 0.8em;
-    color: #888;
+    color: var(--muted);
 }
 
 .section-cta {
@@ -507,12 +507,12 @@ h2 {
     align-items: center;
     gap: 1.25rem;
     padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(var(--fg-rgb), 0.05);
     border-radius: 8px;
     text-decoration: none;
-    color: #e0e0e0;
+    color: var(--text);
     transition: all 0.3s ease;
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(var(--accent-rgb), 0.1);
 }
 
 .article-thumb {
@@ -529,14 +529,14 @@ h2 {
 
 .article-card:hover {
     transform: translateX(6px);
-    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.06);
+    box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.06);
 }
 
 .article-pub {
     font-size: 0.75em;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #7a7a6e;
+    color: var(--muted-2);
     display: block;
     margin-bottom: 0.3rem;
 }
@@ -550,7 +550,7 @@ h2 {
 /* Footer */
 .footer {
     padding: 3rem 0;
-    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    border-top: 1px solid rgba(var(--accent-rgb), 0.15);
 }
 
 .footer-links {
@@ -560,12 +560,12 @@ h2 {
 }
 
 .footer-links a {
-    color: #888;
+    color: var(--muted);
     transition: color 0.2s;
 }
 
 .footer-links a:hover {
-    color: #d4af37;
+    color: var(--accent);
 }
 
 /* Animations */
@@ -598,13 +598,13 @@ h2 {
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(15, 15, 30, 0.97);
+        background: var(--panel-bg);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         flex-direction: column;
         padding: 1.5rem 2rem;
         gap: 1rem;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
     }
 
     .dropdown-menu {
@@ -612,7 +612,7 @@ h2 {
         transform: none;
         box-shadow: none;
         border: none;
-        background: rgba(15, 15, 30, 0.95);
+        background: var(--panel-bg);
         backdrop-filter: blur(12px);
         margin-top: 0.25rem;
         padding: 0;

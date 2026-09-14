@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Apply the saved theme before first paint to avoid a flash
+        try { var t = localStorage.getItem('sja-theme'); if (t && t !== 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="../assets/css/themes.css">
     <link rel="stylesheet" href="../assets/css/portfolio.css">
     <link rel="stylesheet" href="../assets/css/pages.css">
     <link rel="stylesheet" href="../assets/css/animations.css">
@@ -144,6 +149,7 @@
         </div>
     </footer>
 
+    <script src="../assets/js/theme.js" defer></script>
     <script src="../assets/js/animations.js" defer></script>
     <script src="../assets/js/experience-data.js" defer></script>
     <script src="../assets/js/experience-modal.js" defer></script>

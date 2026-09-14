@@ -1,0 +1,466 @@
+/* ==========================================================================
+   Themes
+   Every stylesheet reads colours from these variables. Three themes:
+     - "dark"   (default)  — the original gold-on-midnight look
+     - "light"  (Serene)   — soft, warm, peaceful daylight palette
+     - "aurora" (Aurora)   — all the colours at once, animated
+   The active theme is `data-theme` on <html>, persisted in localStorage.
+   Load this file FIRST so the variables exist before other stylesheets.
+   ========================================================================== */
+
+:root {
+    color-scheme: dark;
+
+    --accent: #d4af37;
+    --accent-rgb: 212, 175, 55;
+    --accent-light: #e0c050;
+    --accent-dark: #b8962e;
+    --accent-glow: #fff3c4;
+    --on-accent: #0a0a0a;
+
+    --accent2: #4682dc;
+    --accent2-rgb: 70, 130, 220;
+    --accent2-light: #8fb4ee;
+
+    --bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #1a1a2e 75%, #0a0a0a 100%);
+    --bg-deep: #0a0a0a;
+    --bg-mid: #1a1a2e;
+    --nav-bg: rgba(10, 10, 10, 0.92);
+    --panel-bg: rgba(15, 15, 30, 0.97);
+    --panel-bg-2: rgba(12, 12, 24, 0.98);
+    --backdrop: radial-gradient(ellipse at center, rgba(26, 26, 46, 0.75), rgba(5, 5, 12, 0.9));
+    --landing-overlay: linear-gradient(135deg, rgba(10, 10, 10, 0.8) 0%, rgba(26, 26, 46, 0.75) 50%, rgba(10, 10, 10, 0.8) 100%);
+
+    --text: #e0e0e0;
+    --text-strong: #ffffff;
+    --text-soft: #b0b0b0;
+    --muted: #888888;
+    --muted-2: #7a7a6e;
+    --muted-3: #3d3d3d;
+    --muted-3-rgb: 61, 61, 61;
+
+    --fg-rgb: 255, 255, 255;      /* translucent surfaces: rgba(var(--fg-rgb), .05) */
+    --shadow-rgb: 0, 0, 0;
+
+    --theme-transition: background-color 0.6s ease, background 0.6s ease, color 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Serene — light theme
+   -------------------------------------------------------------------------- */
+:root[data-theme="light"] {
+    color-scheme: light;
+
+    --accent: #b8891b;
+    --accent-rgb: 184, 137, 27;
+    --accent-light: #d1a12f;
+    --accent-dark: #9a7116;
+    --accent-glow: #fff1c2;
+    --on-accent: #1a1608;
+
+    --accent2: #3b7dd8;
+    --accent2-rgb: 59, 125, 216;
+    --accent2-light: #2f66b8;
+
+    --bg: linear-gradient(135deg, #fbf8f1 0%, #f3f6fb 40%, #f8f3ea 70%, #f4f7f4 100%);
+    --bg-deep: #fbf9f4;
+    --bg-mid: #ffffff;
+    --nav-bg: rgba(255, 253, 248, 0.88);
+    --panel-bg: rgba(255, 255, 255, 0.97);
+    --panel-bg-2: rgba(250, 248, 243, 0.98);
+    --backdrop: radial-gradient(ellipse at center, rgba(240, 236, 226, 0.7), rgba(200, 205, 215, 0.85));
+    --landing-overlay: linear-gradient(135deg, rgba(253, 251, 246, 0.82) 0%, rgba(240, 244, 250, 0.78) 50%, rgba(253, 251, 246, 0.82) 100%);
+
+    --text: #2a2f3a;
+    --text-strong: #14181f;
+    --text-soft: #4f5663;
+    --muted: #6e7480;
+    --muted-2: #8a8f7a;
+    --muted-3: #9a9a9a;
+    --muted-3-rgb: 154, 154, 154;
+
+    --fg-rgb: 20, 24, 32;
+    --shadow-rgb: 60, 70, 90;
+}
+
+:root[data-theme="light"] body {
+    background-attachment: fixed;
+}
+
+:root[data-theme="light"] .project-card,
+:root[data-theme="light"] .article-card,
+:root[data-theme="light"] .timeline-content,
+:root[data-theme="light"] .cert-card {
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 4px 18px rgba(var(--shadow-rgb), 0.06);
+}
+
+:root[data-theme="light"] .project-card:hover {
+    box-shadow: 0 18px 40px rgba(var(--shadow-rgb), 0.16), 0 0 0 1px rgba(var(--accent-rgb), 0.2);
+}
+
+:root[data-theme="light"] .section-bg-icons .icon {
+    opacity: 0.05;
+}
+
+:root[data-theme="light"] .cursor-glow {
+    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.12) 0%, rgba(var(--accent2-rgb), 0.06) 35%, transparent 65%);
+}
+
+/* soft floating clouds for the peaceful feel */
+:root[data-theme="light"] .bg-decoration {
+    background:
+        radial-gradient(ellipse at 15% 30%, rgba(184, 137, 27, 0.10) 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 20%, rgba(59, 125, 216, 0.10) 0%, transparent 45%),
+        radial-gradient(ellipse at 60% 85%, rgba(120, 190, 150, 0.10) 0%, transparent 45%);
+}
+
+:root[data-theme="light"] .btn-details,
+:root[data-theme="light"] .btn-primary {
+    color: #fffdf6;
+}
+
+:root[data-theme="light"] .doc-body iframe {
+    background: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Aurora — everything, animated
+   -------------------------------------------------------------------------- */
+:root[data-theme="aurora"] {
+    color-scheme: dark;
+
+    --accent: #ffd166;
+    --accent-rgb: 255, 209, 102;
+    --accent-light: #ffe08a;
+    --accent-dark: #f4b942;
+    --accent-glow: #fff7d6;
+    --on-accent: #1a1030;
+
+    --accent2: #4cc9f0;
+    --accent2-rgb: 76, 201, 240;
+    --accent2-light: #9ee6ff;
+
+    --bg: linear-gradient(135deg, #0f0c29, #302b63, #1a2a6c, #b21f66, #f7971e, #0f9b8e, #24243e);
+    --bg-deep: #0d0a24;
+    --bg-mid: #1c163f;
+    --nav-bg: rgba(14, 10, 36, 0.72);
+    --panel-bg: rgba(24, 18, 52, 0.94);
+    --panel-bg-2: rgba(16, 12, 40, 0.96);
+    --backdrop: radial-gradient(ellipse at center, rgba(60, 20, 90, 0.6), rgba(8, 6, 24, 0.9));
+    --landing-overlay: linear-gradient(135deg, rgba(15, 12, 41, 0.72) 0%, rgba(178, 31, 102, 0.45) 50%, rgba(15, 155, 142, 0.55) 100%);
+
+    --text: #f1eefb;
+    --text-strong: #ffffff;
+    --text-soft: #d3cde9;
+    --muted: #a9a3c4;
+    --muted-2: #b7b0d3;
+    --muted-3: #6f6a8f;
+    --muted-3-rgb: 111, 106, 143;
+
+    --fg-rgb: 255, 255, 255;
+    --shadow-rgb: 5, 0, 30;
+
+    --rainbow: linear-gradient(90deg, #ff6b6b, #ffd166, #06d6a0, #4cc9f0, #b388ff, #ff6b6b);
+}
+
+/* Slowly shifting multi-colour background */
+:root[data-theme="aurora"] body {
+    background-size: 600% 600%;
+    background-attachment: fixed;
+    animation: aurora-bg 32s ease-in-out infinite;
+}
+
+@keyframes aurora-bg {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Drifting colour blobs over the page */
+:root[data-theme="aurora"] .bg-decoration {
+    background:
+        radial-gradient(ellipse at 20% 30%, rgba(255, 107, 107, 0.22) 0%, transparent 45%),
+        radial-gradient(ellipse at 80% 20%, rgba(76, 201, 240, 0.22) 0%, transparent 45%),
+        radial-gradient(ellipse at 60% 80%, rgba(6, 214, 160, 0.20) 0%, transparent 45%),
+        radial-gradient(ellipse at 30% 90%, rgba(179, 136, 255, 0.22) 0%, transparent 45%);
+    background-size: 200% 200%;
+    animation: aurora-blobs 24s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-blobs {
+    from { background-position: 0% 0%; filter: hue-rotate(0deg); }
+    to   { background-position: 100% 100%; filter: hue-rotate(60deg); }
+}
+
+:root[data-theme="aurora"] .bg-shape {
+    animation-name: shape-spin, aurora-hue;
+    animation-duration: 40s, 12s;
+    animation-iteration-count: infinite, infinite;
+    animation-timing-function: linear, linear;
+    opacity: 0.8;
+}
+
+@keyframes aurora-hue {
+    to { filter: hue-rotate(360deg); }
+}
+
+/* Rainbow headings, dividers and underlines */
+:root[data-theme="aurora"] .section h1,
+:root[data-theme="aurora"] .section h2,
+:root[data-theme="aurora"] .nav-title {
+    background: var(--rainbow);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aurora-text 6s linear infinite;
+}
+
+@keyframes aurora-text {
+    to { background-position: 300% center; }
+}
+
+:root[data-theme="aurora"] .divider,
+:root[data-theme="aurora"] .section h1::after,
+:root[data-theme="aurora"] .section h2::after,
+:root[data-theme="aurora"] .scroll-progress,
+:root[data-theme="aurora"] .xp-card::before,
+:root[data-theme="aurora"] .doc-frame::before,
+:root[data-theme="aurora"] .article-card::before {
+    background: var(--rainbow);
+    background-size: 300% 100%;
+}
+
+/* Glassy cards with a rotating rainbow border on hover */
+:root[data-theme="aurora"] .project-card,
+:root[data-theme="aurora"] .article-card,
+:root[data-theme="aurora"] .timeline-content,
+:root[data-theme="aurora"] .cert-card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+:root[data-theme="aurora"] .project-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--rainbow);
+    background-size: 300% 100%;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    animation: aurora-text 4s linear infinite;
+}
+
+:root[data-theme="aurora"] .project-card:hover::after {
+    opacity: 1;
+}
+
+:root[data-theme="aurora"] .project-card:hover {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 40px rgba(179, 136, 255, 0.25);
+}
+
+/* Rainbow buttons */
+:root[data-theme="aurora"] .btn-primary,
+:root[data-theme="aurora"] .btn-details,
+:root[data-theme="aurora"] .tag-link:hover,
+:root[data-theme="aurora"] .btn-outline:hover {
+    background: var(--rainbow);
+    background-size: 300% auto;
+    animation: aurora-text 5s linear infinite;
+    color: #14102a;
+    border-color: transparent;
+}
+
+:root[data-theme="aurora"] .tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+}
+
+:root[data-theme="aurora"] .timeline-marker {
+    background: var(--rainbow);
+    background-size: 300% 100%;
+    animation: aurora-text 4s linear infinite;
+}
+
+:root[data-theme="aurora"] .timeline-marker.current {
+    animation: aurora-text 4s linear infinite, marker-pulse 2.2s ease-in-out infinite;
+}
+
+:root[data-theme="aurora"] .cursor-glow {
+    background: radial-gradient(circle, rgba(255, 107, 107, 0.16) 0%, rgba(76, 201, 240, 0.12) 35%, transparent 65%);
+    animation: aurora-hue 10s linear infinite;
+}
+
+:root[data-theme="aurora"] .navbar {
+    border-bottom: 1px solid transparent;
+    border-image: var(--rainbow) 1;
+}
+
+:root[data-theme="aurora"] .about-photo {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #ff6b6b, 0 0 0 4px #ffd166, 0 0 0 6px #06d6a0, 0 0 0 8px #4cc9f0, 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+:root[data-theme="aurora"] .section-bg-icons .icon {
+    opacity: 0.12;
+    animation-name: float, aurora-hue;
+    animation-duration: 20s, 14s;
+    animation-iteration-count: infinite, infinite;
+    animation-timing-function: ease-in-out, linear;
+}
+
+/* Landing page orbs get the full spectrum */
+:root[data-theme="aurora"] .orb--gold { background: radial-gradient(circle, rgba(255, 107, 107, 0.6), transparent 65%); }
+:root[data-theme="aurora"] .orb--blue { background: radial-gradient(circle, rgba(76, 201, 240, 0.55), transparent 65%); }
+:root[data-theme="aurora"] .orb--rose { background: radial-gradient(circle, rgba(6, 214, 160, 0.5), transparent 65%); }
+
+/* Gradient text must sit on each letter span (the letters animate on their own layers) */
+:root[data-theme="aurora"] .hero h1:not(:has(.char)),
+:root[data-theme="aurora"] .hero h1 .char {
+    background: var(--rainbow);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+:root[data-theme="aurora"] .hero h1:not(:has(.char)) {
+    animation: aurora-text 6s linear infinite;
+}
+
+:root[data-theme="aurora"] .hero h1 .char {
+    animation: char-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards, aurora-text 6s linear infinite;
+}
+
+:root[data-theme="aurora"] .btn {
+    border-image: var(--rainbow) 1;
+    border-radius: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Theme switcher
+   -------------------------------------------------------------------------- */
+.theme-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+    border-radius: 999px;
+    background: rgba(var(--fg-rgb), 0.06);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    position: relative;
+    isolation: isolate;
+    flex-shrink: 0;
+}
+
+.theme-switch button {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 1;
+}
+
+.theme-switch button:hover {
+    transform: translateY(-2px) scale(1.15) rotate(-10deg);
+    color: var(--text-strong);
+}
+
+.theme-switch button[aria-pressed="true"] {
+    color: var(--on-accent);
+}
+
+/* Sliding pill highlight */
+.theme-switch::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    transform: translateX(calc(var(--i, 0) * 34px));
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.4s ease;
+    z-index: 0;
+    box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.4);
+}
+
+:root[data-theme="aurora"] .theme-switch::before {
+    background: var(--rainbow);
+    background-size: 300% auto;
+    animation: aurora-text 4s linear infinite;
+}
+
+.theme-switch.floating {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 50;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Smooth cross-fade while switching (fallback when View Transitions are unavailable) */
+html.theme-fading,
+html.theme-fading * {
+    transition: var(--theme-transition) !important;
+}
+
+/* Circular reveal via the View Transitions API */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+    animation: theme-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes theme-reveal {
+    from { clip-path: circle(0 at var(--tx, 50%) var(--ty, 50%)); }
+    to   { clip-path: circle(150% at var(--tx, 50%) var(--ty, 50%)); }
+}
+
+@media (max-width: 736px) {
+    .navbar .theme-switch {
+        margin-left: auto;
+        margin-right: 0.75rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root[data-theme="aurora"] body,
+    :root[data-theme="aurora"] .bg-decoration,
+    :root[data-theme="aurora"] .section h1,
+    :root[data-theme="aurora"] .section h2,
+    :root[data-theme="aurora"] .nav-title,
+    :root[data-theme="aurora"] .btn-primary,
+    :root[data-theme="aurora"] .btn-details,
+    :root[data-theme="aurora"] .timeline-marker,
+    :root[data-theme="aurora"] .project-card::after,
+    ::view-transition-new(root) {
+        animation: none !important;
+    }
+}

@@ -12,8 +12,8 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.8em;
     font-weight: 600;
-    color: #0a0a0a;
-    background: linear-gradient(135deg, #d4af37, #b8962e);
+    color: var(--on-accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -28,7 +28,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.4) 50%, transparent 65%);
+    background: linear-gradient(115deg, transparent 35%, rgba(var(--fg-rgb), 0.4) 50%, transparent 65%);
     transform: translateX(-120%);
 }
 
@@ -39,7 +39,7 @@
 
 .btn-details:hover {
     transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 10px 24px rgba(212, 175, 55, 0.35);
+    box-shadow: 0 10px 24px rgba(var(--accent-rgb), 0.35);
 }
 
 .btn-details .arrow {
@@ -59,7 +59,7 @@
     display: grid;
     place-items: center;
     padding: 1.5rem;
-    background: radial-gradient(ellipse at center, rgba(26, 26, 46, 0.75), rgba(5, 5, 12, 0.9));
+    background: var(--backdrop);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     opacity: 0;
@@ -87,7 +87,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #d4af37;
+    background: var(--accent);
     opacity: 0;
     pointer-events: none;
     animation: xp-particle 6s ease-in-out infinite;
@@ -107,21 +107,21 @@
     max-height: calc(100vh - 3rem);
     overflow-y: auto;
     overscroll-behavior: contain;
-    background: linear-gradient(160deg, rgba(22, 22, 40, 0.98), rgba(12, 12, 24, 0.98));
-    border: 1px solid rgba(212, 175, 55, 0.35);
+    background: linear-gradient(160deg, var(--panel-bg), var(--panel-bg-2));
+    border: 1px solid rgba(var(--accent-rgb), 0.35);
     border-radius: 18px;
     box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.6),
-        0 0 0 1px rgba(255, 255, 255, 0.03) inset,
-        0 0 60px rgba(212, 175, 55, 0.08);
-    color: #e0e0e0;
+        0 30px 80px rgba(var(--shadow-rgb), 0.6),
+        0 0 0 1px rgba(var(--fg-rgb), 0.03) inset,
+        0 0 60px rgba(var(--accent-rgb), 0.08);
+    color: var(--text);
     font-family: 'IBM Plex Mono', monospace;
     transform: translateY(40px) scale(0.92) rotateX(8deg);
     transform-origin: center 20%;
     opacity: 0;
     transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
     scrollbar-width: thin;
-    scrollbar-color: rgba(212, 175, 55, 0.4) transparent;
+    scrollbar-color: rgba(var(--accent-rgb), 0.4) transparent;
 }
 
 .xp-modal.open .xp-card {
@@ -143,7 +143,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #d4af37, #4682dc, #d4af37, transparent);
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), var(--accent), transparent);
     background-size: 200% 100%;
     animation: xp-bar 3s linear infinite;
     border-radius: 18px 18px 0 0;
@@ -162,9 +162,9 @@
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    background: rgba(255, 255, 255, 0.04);
-    color: #d4af37;
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    background: rgba(var(--fg-rgb), 0.04);
+    color: var(--accent);
     font-size: 1.2rem;
     line-height: 1;
     display: grid;
@@ -176,8 +176,8 @@
 
 .xp-close:hover {
     transform: rotate(90deg) scale(1.1);
-    background: #d4af37;
-    color: #0a0a0a;
+    background: var(--accent);
+    color: var(--on-accent);
 }
 
 /* Header */
@@ -186,7 +186,7 @@
     align-items: center;
     gap: 1.25rem;
     padding: 2rem 2rem 1.25rem;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
 }
 
 .xp-logo {
@@ -195,21 +195,21 @@
     min-width: 84px;
     border-radius: 14px;
     object-fit: cover;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(212, 175, 55, 0.25);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    background: rgba(var(--fg-rgb), 0.08);
+    border: 1px solid rgba(var(--accent-rgb), 0.25);
+    box-shadow: 0 10px 30px rgba(var(--shadow-rgb), 0.4);
 }
 
 .xp-title {
     font-size: 1.25em;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-strong);
     margin: 0 0 0.25rem;
     line-height: 1.3;
 }
 
 .xp-org {
-    color: #d4af37;
+    color: var(--accent);
     font-weight: 600;
     text-decoration: none;
     font-size: 0.95em;
@@ -224,7 +224,7 @@
     bottom: -2px;
     width: 100%;
     height: 1px;
-    background: #d4af37;
+    background: var(--accent);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -245,15 +245,15 @@
     font-size: 0.72em;
     padding: 0.25rem 0.65rem;
     border-radius: 999px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    color: #d4af37;
-    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    color: var(--accent);
+    background: rgba(var(--accent-rgb), 0.08);
 }
 
 .xp-chip--date {
-    background: rgba(70, 130, 220, 0.12);
-    border-color: rgba(70, 130, 220, 0.35);
-    color: #8fb4ee;
+    background: rgba(var(--accent2-rgb), 0.12);
+    border-color: rgba(var(--accent2-rgb), 0.35);
+    color: var(--accent2-light);
 }
 
 /* Body */
@@ -262,7 +262,7 @@
 }
 
 .xp-tagline {
-    color: #b0b0b0;
+    color: var(--text-soft);
     font-style: italic;
     margin-bottom: 1.25rem;
     font-size: 0.9em;
@@ -272,7 +272,7 @@
     font-size: 0.7em;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #7a7a6e;
+    color: var(--muted-2);
     margin: 0 0 0.6rem;
 }
 
@@ -287,9 +287,9 @@
     font-size: 0.72em;
     padding: 0.25rem 0.6rem;
     border-radius: 4px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #cfcfcf;
+    background: rgba(var(--fg-rgb), 0.06);
+    border: 1px solid rgba(var(--fg-rgb), 0.08);
+    color: var(--text-soft);
 }
 
 .xp-bullets {
@@ -306,7 +306,7 @@
     padding-left: 1.6rem;
     font-size: 0.86em;
     line-height: 1.7;
-    color: #d6d6d6;
+    color: var(--text-soft);
 }
 
 .xp-bullets li::before {
@@ -317,8 +317,8 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #d4af37, #4682dc);
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.5);
 }
 
 /* Footer navigation */
@@ -328,7 +328,7 @@
     justify-content: space-between;
     gap: 1rem;
     padding: 1rem 2rem 1.5rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    border-top: 1px solid rgba(var(--accent-rgb), 0.15);
 }
 
 .xp-nav {
@@ -338,9 +338,9 @@
     padding: 0.5rem 0.9rem;
     font-family: inherit;
     font-size: 0.78em;
-    color: #d4af37;
+    color: var(--accent);
     background: transparent;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
     border-radius: 4px;
     cursor: pointer;
     max-width: 45%;
@@ -354,8 +354,8 @@
 }
 
 .xp-nav:hover {
-    background: #d4af37;
-    color: #0a0a0a;
+    background: var(--accent);
+    color: var(--on-accent);
     transform: translateY(-2px);
 }
 
@@ -366,7 +366,7 @@
 
 .xp-counter {
     font-size: 0.72em;
-    color: #7a7a6e;
+    color: var(--muted-2);
     letter-spacing: 0.1em;
 }
 
@@ -470,7 +470,7 @@ body.xp-lock {
     display: grid;
     place-items: center;
     padding: 1.25rem;
-    background: rgba(4, 4, 10, 0.88);
+    background: var(--backdrop);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     opacity: 0;
@@ -498,11 +498,11 @@ body.xp-lock {
     max-height: calc(100vh - 2.5rem);
     display: flex;
     flex-direction: column;
-    background: linear-gradient(160deg, rgba(22, 22, 40, 0.98), rgba(12, 12, 24, 0.98));
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: linear-gradient(160deg, var(--panel-bg), var(--panel-bg-2));
+    border: 1px solid rgba(var(--accent-rgb), 0.4);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), 0 0 80px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 40px 100px rgba(var(--shadow-rgb), 0.7), 0 0 80px rgba(var(--accent-rgb), 0.1);
     font-family: 'IBM Plex Mono', monospace;
     transform: scale(0.85) translateY(30px) rotateX(10deg);
     transform-origin: center 30%;
@@ -529,7 +529,7 @@ body.xp-lock {
     right: 0;
     height: 3px;
     z-index: 3;
-    background: linear-gradient(90deg, transparent, #d4af37, #4682dc, #d4af37, transparent);
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), var(--accent), transparent);
     background-size: 200% 100%;
     animation: xp-bar 3s linear infinite;
 }
@@ -540,14 +540,14 @@ body.xp-lock {
     justify-content: space-between;
     gap: 1rem;
     padding: 1rem 1.25rem;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-    color: #e0e0e0;
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
+    color: var(--text);
 }
 
 .doc-title {
     font-size: 0.85em;
     font-weight: 600;
-    color: #d4af37;
+    color: var(--accent);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -562,17 +562,17 @@ body.xp-lock {
 
 .doc-open {
     font-size: 0.75em;
-    color: #b0b0b0;
+    color: var(--text-soft);
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(var(--fg-rgb), 0.12);
     border-radius: 4px;
     padding: 0.35rem 0.7rem;
     transition: color 0.25s ease, border-color 0.25s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .doc-open:hover {
-    color: #d4af37;
-    border-color: rgba(212, 175, 55, 0.5);
+    color: var(--accent);
+    border-color: rgba(var(--accent-rgb), 0.5);
     transform: translateY(-2px);
 }
 
@@ -580,9 +580,9 @@ body.xp-lock {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    background: rgba(255, 255, 255, 0.04);
-    color: #d4af37;
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    background: rgba(var(--fg-rgb), 0.04);
+    color: var(--accent);
     font-size: 1.2rem;
     line-height: 1;
     display: grid;
@@ -593,8 +593,8 @@ body.xp-lock {
 
 .doc-close:hover {
     transform: rotate(90deg) scale(1.1);
-    background: #d4af37;
-    color: #0a0a0a;
+    background: var(--accent);
+    color: var(--on-accent);
 }
 
 .doc-body {
@@ -605,17 +605,17 @@ body.xp-lock {
     place-items: center;
     padding: 1.25rem;
     background:
-        radial-gradient(ellipse at top, rgba(212, 175, 55, 0.06), transparent 60%),
-        rgba(0, 0, 0, 0.35);
+        radial-gradient(ellipse at top, rgba(var(--accent-rgb), 0.06), transparent 60%),
+        rgba(var(--shadow-rgb), 0.35);
     scrollbar-width: thin;
-    scrollbar-color: rgba(212, 175, 55, 0.4) transparent;
+    scrollbar-color: rgba(var(--accent-rgb), 0.4) transparent;
 }
 
 .doc-img {
     max-width: 100%;
     max-height: calc(100vh - 8.5rem);
     border-radius: 8px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 50px rgba(var(--shadow-rgb), 0.6);
     cursor: zoom-in;
     opacity: 0;
     transform: scale(0.96);
@@ -647,7 +647,7 @@ body.xp-lock {
     width: 100%;
     height: 100%;
     border: 0;
-    background: #fff;
+    background: var(--text-strong);
     opacity: 0;
     animation: doc-img-in 0.6s ease 0.2s forwards;
 }

@@ -12,6 +12,7 @@ Personal portfolio website for **Syeda Juveria Afreen (SJA)** — CEO | CTO | So
 
 - HTML5, CSS3, Vanilla JavaScript
 - Google Fonts (Lexend Deca, Inter, IBM Plex Mono)
+- Three themes — Dark (default), Serene (light) and Aurora (animated multi-colour) — switchable from the navbar, remembered per browser, with a circular reveal transition
 - Fully responsive design
 - CSS animations and scroll-based reveal effects (staggered card reveals, 3D card tilt, scroll progress bar, cursor glow, ripple buttons, letter-by-letter hero title) — all respect `prefers-reduced-motion`
 
@@ -26,6 +27,7 @@ Personal portfolio website for **Syeda Juveria Afreen (SJA)** — CEO | CTO | So
 │   └── certificates.html       # Certificates & credentials
 ├── assets/
 │   ├── css/
+│   │   ├── themes.css          # Colour variables + Dark / Serene / Aurora themes + switcher
 │   │   ├── landing.css         # Landing page styles
 │   │   ├── portfolio.css       # Portfolio page styles
 │   │   ├── pages.css           # Education & experience styles
@@ -40,6 +42,7 @@ Personal portfolio website for **Syeda Juveria Afreen (SJA)** — CEO | CTO | So
 │   │   └── sja/                # Profile photo & background
 │   ├── docs/                   # Transcripts (PDF) opened in the lightbox
 │   └── js/
+│       ├── theme.js            # Theme switcher (localStorage + View Transitions)
 │       ├── animations.js       # Shared scroll/hover animation behaviour
 │       ├── experience-data.js  # Role & education descriptions (edit text here)
 │       └── experience-modal.js # "View Details" modal + certificate/transcript lightbox

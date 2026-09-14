@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        // Apply the saved theme before first paint to avoid a flash
+        try { var t = localStorage.getItem('sja-theme'); if (t && t !== 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="assets/css/themes.css">
     <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 <body>
@@ -52,6 +57,7 @@
         </div>
     </main>
 
+    <script src="assets/js/theme.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
