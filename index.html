@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 <body>
+    <div class="bg-photo" aria-hidden="true"></div>
+    <div class="orb orb--gold" aria-hidden="true"></div>
+    <div class="orb orb--blue" aria-hidden="true"></div>
+    <div class="orb orb--rose" aria-hidden="true"></div>
     <div class="noise-overlay"></div>
     <div class="gradient-overlay"></div>
 
@@ -50,16 +54,38 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const fadeLeftElements = document.querySelectorAll('.fade-left');
-            const fadeRightElements = document.querySelectorAll('.fade-right');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            setTimeout(() => {
-                fadeLeftElements.forEach(el => el.classList.add('visible'));
-            }, 200);
+            // Split the title into letters so they can cascade in
+            const h1 = document.querySelector('.hero h1');
+            if (h1 && !reduceMotion) {
+                const text = h1.textContent;
+                h1.setAttribute('aria-label', text);
+                h1.textContent = '';
+                Array.from(text).forEach((ch, i) => {
+                    const span = document.createElement('span');
+                    span.className = 'char' + (ch === ' ' ? ' space' : '');
+                    span.textContent = ch === ' ' ? '\u00A0' : ch;
+                    span.style.animationDelay = (0.15 + i * 0.03) + 's';
+                    span.setAttribute('aria-hidden', 'true');
+                    h1.appendChild(span);
+                });
+            }
 
-            setTimeout(() => {
-                fadeRightElements.forEach(el => el.classList.add('visible'));
-            }, 600);
+            document.querySelector('.subtitle')?.classList.add('shimmer');
+
+            // Orbs gently follow the pointer for a parallax feel
+            if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                const orbs = document.querySelectorAll('.orb');
+                window.addEventListener('mousemove', (e) => {
+                    const x = (e.clientX / window.innerWidth - 0.5);
+                    const y = (e.clientY / window.innerHeight - 0.5);
+                    orbs.forEach((orb, i) => {
+                        const depth = (i + 1) * 18;
+                        orb.style.translate = (x * depth) + 'px ' + (y * depth) + 'px';
+                    });
+                }, { passive: true });
+            }
         });
     </script>
 </body>

@@ -5,14 +5,15 @@ Personal portfolio website for **Syeda Juveria Afreen (SJA)** — CEO | CTO | So
 ## Pages
 
 - **Landing Page** (`index.html`) — Hero-style intro with name, title, and quick links to Email, CV, Telegram, LinkedIn, Profile, and GitHub.
-- **Portfolio** (`portfolio.html`) — Full portfolio with sections for Code Projects, NoCode Projects, Game Projects, Robotic Projects, and Articles.
+- **Portfolio** (`portfolio.html`) — Full portfolio with sections for Code Projects, SaaS / Platforms, NoCode Projects, Game Projects, AI / Robotics Projects, and Articles.
+- **All Websites** (`allwebsites.md`) — Flat list of every live website/app with a one-line description, stack and link.
 
 ## Tech Stack
 
 - HTML5, CSS3, Vanilla JavaScript
 - Google Fonts (Lexend Deca, Inter, IBM Plex Mono)
 - Fully responsive design
-- CSS animations and scroll-based reveal effects
+- CSS animations and scroll-based reveal effects (staggered card reveals, 3D card tilt, scroll progress bar, cursor glow, ripple buttons, letter-by-letter hero title) — all respect `prefers-reduced-motion`
 
 ## Structure
 
@@ -28,11 +29,17 @@ Personal portfolio website for **Syeda Juveria Afreen (SJA)** — CEO | CTO | So
 │   │   ├── landing.css         # Landing page styles
 │   │   ├── portfolio.css       # Portfolio page styles
 │   │   ├── pages.css           # Education & experience styles
-│   │   └── certificates.css    # Certificates page styles
+│   │   ├── certificates.css    # Certificates page styles
+│   │   ├── section-bg.css      # Floating section background icons
+│   │   └── animations.css      # Shared animations & transitions
 │   ├── images/
 │   │   ├── education/          # University logos
-│   │   └── experience/         # Company logos
+│   │   ├── experience/         # Company logos
+│   │   ├── code/ saas/ nocode/ games/ ai-robotics/ articles/   # Project thumbnails
+│   │   └── sja/                # Profile photo & background
 │   └── js/
+│       └── animations.js       # Shared scroll/hover animation behaviour
+├── allwebsites.md              # Every live website with description + link
 └── README.md
 ```
 
