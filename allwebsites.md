@@ -2,7 +2,7 @@
 
 Every live website, app and project by **Syeda Juveria Afreen (SJA)**, grouped the same way as the [portfolio page](pages/portfolio.html).
 
-**Total: 199 projects**
+**Total: 199 projects + 11 published articles**
 
 ## Code Projects (103)
 
@@ -238,6 +238,20 @@ Every live website, app and project by **Syeda Juveria Afreen (SJA)**, grouped t
 | SJA Main Portfolio (Netlify) | Netlify deployment of this portfolio | [sja-portfolio.netlify.app](https://sja-portfolio.netlify.app) |
 | Pulse Social (aka Social Media Agency) | Same site as the Pulse Social card; the old social-media-agency worker URL is retired | [pulse-social-agency.sja-affu765.workers.dev](https://pulse-social-agency.sja-affu765.workers.dev/) |
 
-## Articles
+## Articles (11)
 
-Published on [Life Lovers Magazine](https://lifeloversmag.com) — see the Articles section of the portfolio page for the full list.
+Published on [LifeLovers Magazine](https://lifeloversmag.com).
+
+| # | Date | Article | What it's about | Link |
+|---|---|---|---|---|
+| 1 | 2025-08-03 | The Ultimate Beginner's Guide to Journaling for Mindfulness and Clarity | Beginner-friendly guide to starting a journaling habit for mindfulness and mental clarity. | [lifeloversmag.com/2025/08/03/the-ultimate-beginners-guide-to-journaling-for-mindfulness-and-clarity](https://lifeloversmag.com/2025/08/03/the-ultimate-beginners-guide-to-journaling-for-mindfulness-and-clarity/) |
+| 2 | 2025-05-18 | Gratitude Won't Pay Your Bills, But It Might Just Save Your Sanity | Why practicing gratitude helps with stress and perspective even when life is hard. | [lifeloversmag.com/2025/05/18/gratitude-wont-pay-your-bills-but-it-might-just-save-your-sanity](https://lifeloversmag.com/2025/05/18/gratitude-wont-pay-your-bills-but-it-might-just-save-your-sanity/) |
+| 3 | 2025-01-14 | Al Shallal Theme Park in Saudi Arabia | Travel piece on Al Shallal Theme Park in Jeddah — rides, attractions and tips. | [lifeloversmag.com/2025/01/14/al-shallal-theme-park-in-saudi-arabia](https://lifeloversmag.com/2025/01/14/al-shallal-theme-park-in-saudi-arabia/) |
+| 4 | 2025-01-08 | Self-Love Resolutions for 2025: Celebrating Yourself on International Self-Love Day | Self-love resolutions for the new year, tied to International Self-Love Day. | [lifeloversmag.com/2025/01/08/self-love-resolutions-for-2025-celebrating-yourself-on-international-self-love-day](https://lifeloversmag.com/2025/01/08/self-love-resolutions-for-2025-celebrating-yourself-on-international-self-love-day/) |
+| 5 | 2024-05-30 | Emergency landing: What to expect and what to do when your flight lives a crisis while in the air | What happens during an in-flight emergency landing and how passengers should respond. | [lifeloversmag.com/2024/05/30/emergency-landing-what-to-expect-and-what-to-do-when-your-flight-lives-a-crisis-while-in-the-air](https://lifeloversmag.com/2024/05/30/emergency-landing-what-to-expect-and-what-to-do-when-your-flight-lives-a-crisis-while-in-the-air/) |
+| 6 | 2024-04-02 | Eid al-Fitr: A Celebration of Faith and Renewal | The meaning and traditions of Eid al-Fitr as a celebration of faith and renewal. | [lifeloversmag.com/2024/04/02/eid-al-fitr-a-celebration-of-faith-and-renewal](https://lifeloversmag.com/2024/04/02/eid-al-fitr-a-celebration-of-faith-and-renewal/) |
+| 7 | 2024-01-11 | Education for Women Worldwide: the Fine Line Between Fulfilling Our Dreams or Following Someone Else's | Essay on women's education worldwide and choosing your own dreams over others' expectations. | [lifeloversmag.com/2024/01/11/education-for-women-worldwide-the-fine-line-between-fulfilling-our-dreams-or-following-someone-elses](https://lifeloversmag.com/2024/01/11/education-for-women-worldwide-the-fine-line-between-fulfilling-our-dreams-or-following-someone-elses/) |
+| 8 | 2023-11-08 | How to stay positive when plans don't work out | Practical ways to stay positive when plans fall apart. | [lifeloversmag.com/2023/11/08/how-to-stay-positive-when-plans-dont-work-out](https://lifeloversmag.com/2023/11/08/how-to-stay-positive-when-plans-dont-work-out/) |
+| 9 | 2023-09-08 | Saving tips to make the most out of your trip | Money-saving tips for getting the most out of a trip. | [lifeloversmag.com/2023/09/08/saving-tips-to-make-the-most-out-of-your-trip](https://lifeloversmag.com/2023/09/08/saving-tips-to-make-the-most-out-of-your-trip/) |
+| 10 | 2023-08-08 | Staying healthy while working remotely | Habits for staying physically and mentally healthy while working remotely. | [lifeloversmag.com/2023/08/08/staying-healthy-while-working-remotely](https://lifeloversmag.com/2023/08/08/staying-healthy-while-working-remotely/) |
+| 11 | 2023-07-06 | Overcoming Limitations and Thriving in Saudi Arabia as an INTJ | Personal essay on thriving in Saudi Arabia as an INTJ despite limitations. | [lifeloversmag.com/2023/07/06/overcoming-limitations-and-thriving-in-saudi-arabia-as-an-intj](https://lifeloversmag.com/2023/07/06/overcoming-limitations-and-thriving-in-saudi-arabia-as-an-intj/) |
