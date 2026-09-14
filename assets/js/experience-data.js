@@ -76,7 +76,22 @@ window.EXPERIENCE_ROLES = {
         logo: '../assets/images/experience/globalcontriver.jpg',
         period: 'Oct 2024 – Nov 2025',
         type: 'Freelance · Remote · Sri Lanka',
-        tagline: 'Full-stack delivery for clients across the US, Europe and Asia',
+        tagline: 'Web & software development consultancy',
+        stack: ['PHP', 'Laravel', 'React', 'Next.js', 'WordPress', 'Cloudflare', 'Consulting'],
+        bullets: [
+            'Advised the agency and its clients on architecture, stack selection and delivery approach for web and software projects.',
+            'Led development on client engagements from scoping through deployment, reviewing code and mentoring contributors.',
+            'Set up deployment pipelines and hosting for delivered projects, and handled post-launch support and optimisation.'
+        ]
+    },
+    freelancephp: {
+        title: 'Full-Stack PHP Developer',
+        org: 'Freelance (US, Europe & Asia clients)',
+        url: '',
+        logo: '../assets/images/experience/freelance-php.png',
+        period: 'May 2024 – Nov 2025',
+        type: 'Contract · Remote',
+        tagline: 'Full-stack delivery for international clients',
         stack: ['PHP', 'Laravel', 'React', 'Next.js', 'WordPress', 'WooCommerce', 'Python', 'Docker', 'GCP App Engine', 'WHMCS API', 'GitHub Actions'],
         bullets: [
             'Fine Hosted LLC (USA): built and maintained full-stack web applications with PHP, Laravel, WordPress and WooCommerce, integrating the WHMCS API for hosting automation; implemented secure coding practices including CSRF protection, input validation and PSR compliance.',
@@ -121,7 +136,7 @@ window.EXPERIENCE_ROLES = {
         org: 'Apex Games',
         url: 'https://apex-games-website-git-dev-4-apex-website.vercel.app/',
         logo: '../assets/images/experience/apexgames.png',
-        period: 'Sep 2022 – Dec 2025',
+        period: 'Sep 2022 – April 2025',
         type: 'Part-time · Remote',
         tagline: 'Indie game studio building a carnival-themed MMO',
         stack: ['Unity', 'C#', 'React', 'Vite'],
