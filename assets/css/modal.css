@@ -672,3 +672,24 @@ body.xp-lock {
         transform: none;
     }
 }
+
+/* Button sits on the right of the timeline card, vertically centred */
+.timeline-content > .btn-details {
+    margin-top: 0;
+    margin-left: auto;
+    align-self: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 736px) {
+    .timeline-content {
+        flex-wrap: wrap;
+    }
+
+    .timeline-content > .btn-details {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
