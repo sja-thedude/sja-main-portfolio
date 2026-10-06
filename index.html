@@ -25,6 +25,11 @@
 
     <main class="hero">
         <div class="hero-content fade-left">
+            <div class="portrait" data-depth="assets/images/sja/portrait-depth.webp">
+                <img src="assets/images/sja/portrait.webp" alt="Syeda Juveria Afreen" width="800" height="1000">
+                <canvas aria-hidden="true"></canvas>
+                <span class="portrait-glare" aria-hidden="true"></span>
+            </div>
             <h1>SYEDA JUVERIA AFREEN (SJA)</h1>
             <p class="subtitle">CEO | CTO | Product & Engineering Lead | Dual Masters - MCA, MEng Robotics</p>
         </div>
@@ -58,6 +63,7 @@
     </main>
 
     <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/portrait3d.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

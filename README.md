@@ -43,6 +43,7 @@ Personal portfolio website for **Syeda Juveria Afreen (SJA)** — CEO | CTO | So
 │   ├── docs/                   # Transcripts (PDF) opened in the lightbox
 │   └── js/
 │       ├── theme.js            # Theme switcher (localStorage + View Transitions)
+│       ├── portrait3d.js       # Landing 3D portrait: WebGL depth-map parallax that turns toward the pointer
 │       ├── animations.js       # Shared scroll/hover animation behaviour
 │       ├── experience-data.js  # Role & education descriptions (edit text here)
 │       └── experience-modal.js # "View Details" modal + certificate/transcript lightbox
